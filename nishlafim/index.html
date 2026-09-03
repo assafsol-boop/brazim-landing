@@ -310,7 +310,9 @@ input[aria-invalid="true"]{border-color:var(--err)}
   var fbLink  = document.getElementById('fb-link');
 
   var LRM = '\u200E';   // Left-to-Right Mark - שומר על סדר הספרות בשורה עברית
-  var WA  = 'https://wa.me/97237501459?text=';
+  var WA   = 'https://wa.me/97237501459?text=';
+  var HOOK = 'https://hook.eu2.make.com/xwbl1uil3q83iip3qnxyo9q0pw4mkntx';
+  var PAGE = 'nishlafim';
   var OPENER = 'היי, השארתי פרטים בדף הברזים הנשלפים למטבח.';
 
   function trim(v){ return String(v).replace(/^\s+|\s+$/g, ''); }
@@ -372,6 +374,18 @@ input[aria-invalid="true"]{border-color:var(--err)}
     lines.push('שם: ' + name);
     lines.push('טלפון: ' + LRM + phone);
     if (mail.length > 0){ lines.push('אימייל: ' + LRM + mail); }
+
+    // שולחים את הליד לצינור לפני שעוזבים את הדף.
+    // WHY sendBeacon: הניווט לוואטסאפ קורה מיד, ובקשת fetch רגילה הייתה נקטעת
+    // באמצע. sendBeacon נועד בדיוק לזה - הדפדפן מתחייב לשלוח גם אחרי סגירת הדף.
+    // WHY בכלל: מי שממשיך לוואטסאפ - דניאל עונה לו. מי שנוטש באמצע - הפרטים
+    // כבר אצלנו, ויוצאים אליו תבנית ואימייל.
+    try {
+      navigator.sendBeacon(HOOK, new Blob([JSON.stringify({
+        name: name, phone: phone, email: mail,
+        page: PAGE, source: 'landing-form', url: location.href
+      })], { type: 'application/json' }));
+    } catch (e) { /* שליחה שנכשלת לא תעצור את המסלול לוואטסאפ */ }
 
     var url = WA + encodeURIComponent(lines.join('\n'));
     fbLink.href = url;
