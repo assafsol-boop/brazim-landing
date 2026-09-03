@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ברזי מטבח נשלפים - ברזים</title>
+<meta name="description" content="ייעוץ באולם בפתח תקווה">
+<link rel="icon" href="favicon.ico">
+<style>
+:root{
+  --brand:#006BB2;
+  --brand-h:#0076C0;
+  --brand-d:#00447F;
+  --brand-2:#0094D3;
+  --navy:#002E4D;
+  --ink:#333333;
+  --muted:#6B6B6B;
+  --line:#CCCCCC;
+  --bg-soft:#F0F0F0;
+  --err:#B3261E;
+  --wrap:760px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:#FFFFFF;
+  color:var(--ink);
+  font-family:Assistant,"Open Sans Hebrew","Segoe UI",Arial,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  overflow-x:hidden;
+  padding-block-end:84px;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-d)}
+h1,h2,h3{line-height:1.25;margin:0 0 12px}
+h1{font-size:clamp(26px,6.4vw,40px);color:var(--navy);font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(21px,4.6vw,28px);color:var(--navy);font-weight:800}
+h3{font-size:clamp(18px,3.6vw,21px);color:var(--brand-d);font-weight:700}
+p{margin:0 0 14px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:18px}
+.top{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  max-width:var(--wrap);margin-inline:auto;padding:12px 18px;
+}
+.bsd{font-size:15px;color:var(--muted)}
+.logo{width:150px;height:auto}
+.hero{
+  aspect-ratio:1024/838;
+  overflow:hidden;
+  background:#FFFFFF;
+  border-block-end:1px solid var(--line);
+}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center bottom}
+.lede{padding-block:26px 8px}
+.lede p{font-size:clamp(17px,3.9vw,19px);color:var(--ink)}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:14px 22px;
+  background:var(--brand);color:#FFFFFF;
+  font:inherit;font-weight:700;font-size:18px;
+  text-decoration:none;text-align:center;
+  border:0;border-radius:10px;cursor:pointer;width:100%;
+}
+.btn:hover{background:var(--brand-h)}
+.btn:active{background:var(--brand-d)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.btn .gl{width:22px;height:22px;flex:none}
+.trust{
+  list-style:none;margin:22px 0 0;padding:14px 18px;
+  background:var(--bg-soft);
+  display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;
+  font-size:15px;color:var(--navy);font-weight:600;text-align:center;
+}
+.trust li{display:flex;align-items:center;gap:14px}
+.trust li+li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--brand-2);flex:none}
+section{padding-block:28px}
+.blist{list-style:none;margin:0;padding:0}
+.blist li{display:flex;gap:12px;padding-block:12px;border-block-end:1px solid var(--line)}
+.blist li:last-child{border-block-end:0}
+.ico{width:24px;height:24px;flex:none;color:var(--brand);margin-block-start:4px}
+.blist b{display:block;color:var(--navy);font-size:18px;line-height:1.4}
+.blist div>span{display:block;color:var(--muted);font-size:16px}
+.facts{display:grid;gap:14px}
+.card{
+  border:1px solid var(--line);border-radius:12px;
+  padding:18px;background:#FFFFFF;
+}
+.card p{margin:0;font-size:16px;color:var(--muted)}
+.three{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.three li{
+  display:flex;align-items:center;gap:12px;
+  border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+  font-weight:600;color:var(--navy);
+}
+.three .gl{width:28px;height:28px;flex:none;color:var(--brand-2)}
+.action{background:var(--bg-soft);border-block:1px solid var(--line)}
+.action .note{font-size:16px;color:var(--muted)}
+.field{margin-block-end:16px}
+label{display:block;font-weight:700;color:var(--navy);margin-block-end:6px;font-size:16px}
+label .opt{font-weight:400;color:var(--muted);font-size:15px}
+input{
+  width:100%;min-height:52px;padding:12px 14px;
+  font:inherit;font-size:16px;color:var(--ink);
+  background:#FFFFFF;border:1px solid var(--line);border-radius:10px;
+}
+input:focus{outline:0;border-color:var(--brand);box-shadow:0 0 0 3px rgba(0,107,178,.18)}
+input[aria-invalid="true"]{border-color:var(--err)}
+.err{display:block;color:var(--err);font-size:15px;font-weight:600;margin-block-start:6px}
+.fallback{
+  margin-block-start:16px;padding:14px 16px;
+  background:#FFFFFF;border:1px solid var(--brand);border-radius:10px;font-size:16px;
+}
+.fallback p{margin:0 0 8px}
+.fallback p:last-child{margin:0}
+.send{list-style:none;margin:0 0 18px;padding:0}
+.send li{display:flex;gap:12px;padding-block:10px;border-block-end:1px solid var(--line)}
+.send li:last-child{border-block-end:0}
+.foot{background:var(--navy);color:#FFFFFF;padding-block:26px}
+.foot p{margin:0 0 6px;font-size:16px}
+.foot .name{font-weight:800;font-size:19px;margin-block-end:10px}
+.foot a{color:#FFFFFF}
+.foot .fine{margin-block-start:14px;font-size:14px;color:#B9CBD8}
+.sticky{
+  position:fixed;inset-inline:0;inset-block-end:0;z-index:9;
+  background:#FFFFFF;border-block-start:1px solid var(--line);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  box-shadow:0 -2px 12px rgba(0,46,77,.12);
+}
+.sticky .btn{max-width:var(--wrap);margin-inline:auto;min-height:52px;font-size:17px}
+@media (min-width:700px){
+  body{padding-block-end:0}
+  .hero{max-width:560px;margin-inline:auto;border-inline:1px solid var(--line)}
+  .logo{width:190px}
+  .btn{width:auto;min-width:320px}
+  .lede{padding-block:34px 10px}
+  section{padding-block:36px}
+  .facts{grid-template-columns:1fr 1fr}
+  .three{grid-template-columns:1fr 1fr 1fr}
+  .sticky{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <span class="bsd">בס"ד</span>
+  <img class="logo" src="logo.png" alt="ברזים" width="271" height="44">
+</header>
+
+<div class="hero">
+  <img src="hero.jpg" alt="ברז מטבח נשלף בגימור שחור על משטח שיש במטבח מעוצב" width="900" height="900" fetchpriority="high">
+</div>
+
+<main>
+
+  <section class="lede wrap">
+    <h1>המטבח נגמר בפרט אחד</h1>
+    <p>ברז נשלף הוא הפרט שנוגעים בו יותר מכל דבר אחר במטבח, ובדרך כלל בוחרים אותו אחרון - כשכבר נגמרו ההחלטות. אפשר לעבור על הדגמים יחד, ולראות מה מתיישב עם השיש והכיור שכבר נבחרו.</p>
+    <a class="btn" href="https://wa.me/97237501459?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%93%D7%A3%20%D7%94%D7%91%D7%A8%D7%96%D7%99%D7%9D%20%D7%94%D7%A0%D7%A9%D7%9C%D7%A4%D7%99%D7%9D%20%D7%9C%D7%9E%D7%98%D7%91%D7%97.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%A2%D7%9C%20%D7%91%D7%A8%D7%96%20%D7%A0%D7%A9%D7%9C%D7%A3.">
+      <svg class="gl" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.73.46 3.42 1.32 4.9L2.2 21.8l5.05-1.32a9.76 9.76 0 0 0 4.79 1.22c5.4 0 9.8-4.4 9.8-9.8s-4.4-9.7-9.8-9.7zm0 17.9a8.13 8.13 0 0 1-4.16-1.14l-.3-.18-3.08.81.82-3-.2-.31a8.12 8.12 0 0 1-1.25-4.34c0-4.49 3.66-8.14 8.16-8.14a8.14 8.14 0 0 1 8.15 8.15c0 4.49-3.66 8.15-8.14 8.15zm4.47-6.1c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.28.18-.53.06a6.7 6.7 0 0 1-1.96-1.21 7.4 7.4 0 0 1-1.36-1.7c-.14-.24-.01-.37.11-.49.11-.11.24-.28.37-.43.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.45-.59 1.65-1.17.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg>
+      שליחת תמונה בוואטסאפ
+    </a>
+  </section>
+
+  <ul class="trust">
+    <li>מעל 50 שנה בענף</li>
+    <li>אולם תצוגה בסגולה, פתח תקווה</li>
+    <li>מלאי זמין, אספקה עד 7 ימים</li>
+  </ul>
+
+  <section class="wrap">
+    <h2>חמש נקודות, בקצרה</h2>
+    <ul class="blist">
+      <li>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><b>המבחר עשיר, אבל הקטלוג נבחר בקפידה</b><span>דגמים ותיקים בענף, לא כל מה שיצא השנה. מעל 50 שנה בענף זה בעיקר לדעת מה לא להכניס לקטלוג.</span></div>
+      </li>
+      <li>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><b>אחריות יבואן רשמי</b><span>מותגים של היבואנים המובילים בענף, עם האחריות שלהם מאחוריהם.</span></div>
+      </li>
+      <li>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><b>ייעוץ באולם או באתר</b><span>אלפי מוצרים באתר, ואולם תצוגה אחד שבו רואים שניים-שלושה דגמים זה לצד זה. בלי דחיפה - אם הדגם הזול מספיק, זו תהיה ההמלצה.</span></div>
+      </li>
+      <li>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><b>כיורים, טוחני אשפה ואביזרים משלימים</b><span>הכיור, הברז ומה שנכנס מתחת לכיור נראים יחד כל יום. אפשר לסגור את שלושתם במקום אחד.</span></div>
+      </li>
+      <li>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><b>משלוח עד הבית, עד 7 ימים</b><span>משלוחים לכל הארץ, ללקוחות פרטיים ולמוסדות. ברזים ואביזרים - עד 7 ימים.</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <div class="facts">
+      <article class="card">
+        <h3>אולם התצוגה</h3>
+        <p>בן ציון גליס 18, אזור התעשייה סגולה, פתח תקווה.<br>א'-ה' <span dir="ltr">10:00-17:30</span>. כניסה חופשית, חניה חינם, בלי תיאום מראש.</p>
+      </article>
+      <article class="card">
+        <h3>מעל 50 שנה בענף</h3>
+        <p>אתר פעיל מעל עשור ואלפי מוצרים, לצד אולם תצוגה אחד. מותגים של היבואנים המובילים, ומשלוחים לכל הארץ.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>הסל המשלים למטבח</h2>
+    <ul class="three">
+      <li>
+        <svg class="gl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21v-8"/><path d="M12 13c0-4 0-7 4-7h2"/><path d="M8 21h8"/><path d="M10 6h4"/></svg>
+        <span>ברזי מטבח נשלפים</span>
+      </li>
+      <li>
+        <svg class="gl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11h18"/><path d="M5 11v5a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-5"/><path d="M12 11V6"/></svg>
+        <span>כיורים למטבח</span>
+      </li>
+      <li>
+        <svg class="gl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg>
+        <span>טוחני אשפה ואביזרים</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="action" id="action">
+    <div class="wrap">
+      <h2>שלחו תמונה של המטבח בוואטסאפ</h2>
+      <p class="note">ההודעה נפתחת מוכנה - רק לוחצים שליחה ומצרפים תמונה. חוזרים עם שניים-שלושה דגמים שמתיישבים עם מה שכבר נבחר במטבח.</p>
+
+      <!--
+        ייחוס: נוסח ההודעה הוא מנגנון הייחוס היחיד. אין UTM ואין פיקסל על wa.me.
+        ארבעה נוסחים מובחנים, ואסור לאחד ביניהם:
+          מהמודעה ישירות  - "היי, הגעתי מהמודעה של הברזים הנשלפים למטבח."
+          דף א' (הטופס)   - "היי, השארתי פרטים בדף הברזים הנשלפים למטבח."
+          דף א' (noscript)- "היי, הגעתי מטופס הברזים הנשלפים למטבח."
+          דף ב' (וואטסאפ) - "היי, הגעתי מדף הברזים הנשלפים למטבח."
+        הנוסח של דף ב' מופיע בשלושה קישורים בדף הזה, וכולם חייבים להישאר זהים
+        לו ושונים משל דף א'. מי שיאחד את הנוסחים יהרוס את היכולת לדעת
+        מאיפה הגיעה הפנייה.
+      -->
+
+      <h3>מה כדאי לשלוח</h3>
+      <ul class="send">
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>תמונה של השיש והכיור</span></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>גוון הארונות במטבח</span></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>אזור המגורים, בשביל זמן האספקה</span></li>
+      </ul>
+
+      <a class="btn" href="https://wa.me/97237501459?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%93%D7%A3%20%D7%94%D7%91%D7%A8%D7%96%D7%99%D7%9D%20%D7%94%D7%A0%D7%A9%D7%9C%D7%A4%D7%99%D7%9D%20%D7%9C%D7%9E%D7%98%D7%91%D7%97.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%A2%D7%9C%20%D7%91%D7%A8%D7%96%20%D7%A0%D7%A9%D7%9C%D7%A3.">
+        <svg class="gl" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.73.46 3.42 1.32 4.9L2.2 21.8l5.05-1.32a9.76 9.76 0 0 0 4.79 1.22c5.4 0 9.8-4.4 9.8-9.8s-4.4-9.7-9.8-9.7zm0 17.9a8.13 8.13 0 0 1-4.16-1.14l-.3-.18-3.08.81.82-3-.2-.31a8.12 8.12 0 0 1-1.25-4.34c0-4.49 3.66-8.14 8.16-8.14a8.14 8.14 0 0 1 8.15 8.15c0 4.49-3.66 8.15-8.14 8.15zm4.47-6.1c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.28.18-.53.06a6.7 6.7 0 0 1-1.96-1.21 7.4 7.4 0 0 1-1.36-1.7c-.14-.24-.01-.37.11-.49.11-.11.24-.28.37-.43.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.45-.59 1.65-1.17.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg>
+        שליחת הודעה בוואטסאפ
+      </a>
+
+      <div class="fallback">
+        <p>אפשר גם לחייג ישירות: <a href="tel:037501459"><span dir="ltr">03-7501459</span></a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="name">ברזים</p>
+    <p>בן ציון גליס 18, אזור התעשייה סגולה, פתח תקווה</p>
+    <p>שעות פתיחה: א'-ה' <span dir="ltr">10:00-17:30</span>. כניסה חופשית, חניה חינם, בלי תיאום מראש</p>
+    <p>וואטסאפ עסקי: <a href="tel:037501459"><span dir="ltr">03-7501459</span></a></p>
+    <p class="fine">הדף מלווה קמפיין פרסום. פנייה דרך הדף מגיעה לוואטסאפ העסקי של ברזים.</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn" href="https://wa.me/97237501459?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%93%D7%A3%20%D7%94%D7%91%D7%A8%D7%96%D7%99%D7%9D%20%D7%94%D7%A0%D7%A9%D7%9C%D7%A4%D7%99%D7%9D%20%D7%9C%D7%9E%D7%98%D7%91%D7%97.%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%A2%D7%9C%20%D7%91%D7%A8%D7%96%20%D7%A0%D7%A9%D7%9C%D7%A3.">
+    <svg class="gl" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.73.46 3.42 1.32 4.9L2.2 21.8l5.05-1.32a9.76 9.76 0 0 0 4.79 1.22c5.4 0 9.8-4.4 9.8-9.8s-4.4-9.7-9.8-9.7zm0 17.9a8.13 8.13 0 0 1-4.16-1.14l-.3-.18-3.08.81.82-3-.2-.31a8.12 8.12 0 0 1-1.25-4.34c0-4.49 3.66-8.14 8.16-8.14a8.14 8.14 0 0 1 8.15 8.15c0 4.49-3.66 8.15-8.14 8.15zm4.47-6.1c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.28.18-.53.06a6.7 6.7 0 0 1-1.96-1.21 7.4 7.4 0 0 1-1.36-1.7c-.14-.24-.01-.37.11-.49.11-.11.24-.28.37-.43.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.45-.59 1.65-1.17.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg>
+    שליחת הודעה בוואטסאפ
+  </a>
+</div>
+
+</body>
+</html>
