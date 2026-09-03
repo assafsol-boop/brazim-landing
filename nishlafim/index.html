@@ -68,6 +68,11 @@ p{margin:0 0 14px}
 .btn:active{background:var(--brand-d)}
 .btn:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
 .btn .gl{width:22px;height:22px;flex:none}
+/* כפתור משני - מי שרוצה פשוט לגלוש בדגמים ולא להשאיר פרטים.
+   חסימת המסלול הזה מבריחה תנועה שכבר שילמנו עליה. */
+.btn--ghost{background:#FFFFFF;color:var(--brand);border:2px solid var(--brand);margin-block-start:10px;min-height:52px;font-size:17px}
+.btn--ghost:hover{background:var(--bg-soft)}
+.btn--ghost:active{background:var(--bg-soft);border-color:var(--brand-d);color:var(--brand-d)}
 .trust{
   list-style:none;margin:22px 0 0;padding:14px 18px;
   background:var(--bg-soft);
@@ -160,6 +165,7 @@ input[aria-invalid="true"]{border-color:var(--err)}
     <h1>המטבח נגמר בפרט אחד</h1>
     <p>ברז נשלף הוא הפרט שנוגעים בו יותר מכל דבר אחר במטבח, ובדרך כלל בוחרים אותו אחרון - כשכבר נגמרו ההחלטות. אפשר לעבור על הדגמים יחד, ולראות מה מתיישב עם השיש והכיור שכבר נבחרו.</p>
     <a class="btn" href="#action">השאירו פרטים לשיחת ייעוץ</a>
+    <a class="btn btn--ghost" href="https://www.brazim.co.il/132986-%D7%91%D7%A8%D7%96%D7%99%D7%9D-%D7%A0%D7%A9%D7%9C%D7%A4%D7%99%D7%9D-%D7%9C%D7%9E%D7%98%D7%91%D7%97">לצפייה בכל הדגמים באתר</a>
   </section>
 
   <ul class="trust">

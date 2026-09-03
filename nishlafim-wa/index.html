@@ -68,6 +68,11 @@ p{margin:0 0 14px}
 .btn:active{background:var(--brand-d)}
 .btn:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
 .btn .gl{width:22px;height:22px;flex:none}
+/* כפתור משני - מי שרוצה פשוט לגלוש בדגמים ולא להשאיר פרטים.
+   חסימת המסלול הזה מבריחה תנועה שכבר שילמנו עליה. */
+.btn--ghost{background:#FFFFFF;color:var(--brand);border:2px solid var(--brand);margin-block-start:10px;min-height:52px;font-size:17px}
+.btn--ghost:hover{background:var(--bg-soft)}
+.btn--ghost:active{background:var(--bg-soft);border-color:var(--brand-d);color:var(--brand-d)}
 .trust{
   list-style:none;margin:22px 0 0;padding:14px 18px;
   background:var(--bg-soft);
@@ -163,6 +168,7 @@ input[aria-invalid="true"]{border-color:var(--err)}
       <svg class="gl" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.73.46 3.42 1.32 4.9L2.2 21.8l5.05-1.32a9.76 9.76 0 0 0 4.79 1.22c5.4 0 9.8-4.4 9.8-9.8s-4.4-9.7-9.8-9.7zm0 17.9a8.13 8.13 0 0 1-4.16-1.14l-.3-.18-3.08.81.82-3-.2-.31a8.12 8.12 0 0 1-1.25-4.34c0-4.49 3.66-8.14 8.16-8.14a8.14 8.14 0 0 1 8.15 8.15c0 4.49-3.66 8.15-8.14 8.15zm4.47-6.1c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.28.18-.53.06a6.7 6.7 0 0 1-1.96-1.21 7.4 7.4 0 0 1-1.36-1.7c-.14-.24-.01-.37.11-.49.11-.11.24-.28.37-.43.12-.14.16-.24.24-.4.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.85.83-.85 2.03s.87 2.35.99 2.51c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.45-.59 1.65-1.17.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg>
       שליחת תמונה בוואטסאפ
     </a>
+    <a class="btn btn--ghost" href="https://www.brazim.co.il/132986-%D7%91%D7%A8%D7%96%D7%99%D7%9D-%D7%A0%D7%A9%D7%9C%D7%A4%D7%99%D7%9D-%D7%9C%D7%9E%D7%98%D7%91%D7%97">לצפייה בכל הדגמים באתר</a>
   </section>
 
   <ul class="trust">
